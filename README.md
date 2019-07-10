@@ -6,16 +6,12 @@ By [Danmark Mutai](https://github.com/Dnmrk4)
 
 ## Description
 
-- This is a web application made for users to post pitches on any of the 7 different categories. These categories are:
+- This is a web application made for users to post pitches on any of the 4 different categories. These categories are:
 
-    1. Technology
-    2. Academic
-    3. Promotional
-    4. Business
-    5. Productive
-    6. Political
-    7. Interviews
-    8. Health
+    1. Pickup lines
+    2. Promotion
+    3. Product
+    4. Interview 
 
 - A user that is reading the pitches can give feedback to the pitch posts by commenting, liking or disliking the pitch. 
 
