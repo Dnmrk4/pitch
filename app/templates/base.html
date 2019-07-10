@@ -1,0 +1,26 @@
+{% extends 'bootstrap/base.html'%}
+
+{%block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/animate.min.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+<link href="{{url_for('static',filename='favicon.ico')}}" rel="icon">
+<link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+{% endblock %}
+
+<!-- Navbar block  -->
+{% block navbar %}
+    {% include 'navbar.html' %}
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+<script src="{{url_for('static',filename='js/script.js')}}"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/js/mdb.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+{% endblock %}

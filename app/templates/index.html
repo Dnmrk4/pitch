@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+<!-- Styles block -->
+
+{%block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{%endblock%}
+<!-- Content block -->
+{%block content%}
+<div class="container-fluid welcome-page" style="background: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url('/static/bg.jpg');background-size: cover;padding: 0;margin:0;">
+    <div class="container">
+        <div class="row">
+            <center>
+                <div class="col-md-12 welcome">
+                    <div style="color:white;font-weight:bold;font-family:'DM Serif Display', serif;">
+                        <h1>Welcome!</h1>
+                        <h2>to</h2>
+                        <h2>Init pitches</h2>
+                    </div>
+                    {% if current_user.is_authenticated%}
+                    <span>
+                        <a id="start" class="btn btn-danger animated infinite bounce" href="{{url_for('main.pickup')}}">Interview pitches</a>
+                        <a id="start" class="btn btn-danger animated infinite bounce" href="{{url_for('main.promotion')}}">Pickup lines pitches</a>
+                        <a id="start" class="btn btn-danger animated infinite bounce" href="{{url_for('main.product')}}">Product pitches</a>
+                        <a id="start" class="btn btn-danger animated infinite bounce" href="{{url_for('main.interview')}}">Promotion pitches</a>
+                    </span>
+                    {% else %}
+                    <a id="start" class="btn btn-danger animated infinite bounce" href="{{url_for('auth.login')}}">Sign In</a>
+                    {% endif %}
+                </div>
+                <div style="letter-spacing:12px;padding-top:30%;margin:auto;">
+                    <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
+                    <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </center>
+        </div>
+        
+    </div>
+</div>
+{%endblock%}
+
